@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nicholas Tamassia - CS343 Project - Home</title>
+        <link rel="stylesheet" href="app.css" />
+        <script type="module">
+            import { loadTheme } from '@lib/themes'
+            loadTheme()
+        </script>
+    </head>
+
+    <body>
+        <div class="hero min-h-screen" style="background-image: url(@images/albumcollage.png)">
+            <div class="hero-overlay !bg-[#15191e] !bg-opacity-85"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">TANO*C Store Tracker</h1>
+                    <p class="mb-5">A simple dashboard to keep track of the stock of items from TANO*C Store</p>
+                    <a class="btn btn-primary" href="./dashboard/">Go to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

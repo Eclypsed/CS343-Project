@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nicholas Tamassia - CS343 Project - Settings</title>
+        <link rel="stylesheet" href="../app.css" />
+        <script type="module">
+            import { loadTheme } from '@lib/themes'
+            loadTheme()
+        </script>
+    </head>
+
+    <body>
+        <div class="no-scrollbar relative h-screen overflow-x-clip overflow-y-scroll bg-base-300 font-notoSans">
+            <nav class="navbar sticky top-0 isolate z-10 bg-base-100 px-4 font-sans">
+                <div class="navbar-start">
+                    <tanoc-store-logo class="hidden place-items-center md:grid"></tanoc-store-logo>
+                </div>
+                <div class="navbar-center">
+                    <h1 class="hidden md:inline-block">
+                        <strong class="px-3 text-2xl">Settings</strong>
+                    </h1>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn btn-ghost" href="../dashboard/">Dashboard</a>
+                </div>
+            </nav>
+            <main class="my-8 w-full px-[5%]">
+                <div class="mx-auto flex w-full max-w-screen-lg flex-col gap-8">
+                    <div class="flex flex-col gap-2 lg:flex-row lg:gap-0">
+                        <div class="card rounded-box bg-base-100 lg:flex-[1.5]">
+                            <div class="card-body">
+                                <h2 class="card-title">Currencies</h2>
+                                <p>Enable and Disable the currencies you would like to be able to convert to</p>
+                                <div id="currency-actions" class="card-actions justify-end">
+                                    <refresh-exchange-rates-button></refresh-exchange-rates-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:divider lg:divider-horizontal"></div>
+                        <currency-table class="card h-80 overflow-x-auto rounded-box bg-base-100 lg:flex-1"></currency-table>
+                    </div>
+                    <div class="divider !my-0 lg:hidden"></div>
+                    <div class="flex flex-col gap-2 lg:flex-row lg:gap-0">
+                        <div class="card rounded-box bg-base-100 lg:flex-1">
+                            <div class="card-body">
+                                <h2 class="card-title">Customization</h2>
+                                <p>Customize the interface to your heart's desire!</p>
+                            </div>
+                        </div>
+                        <div class="lg:divider lg:divider-horizontal"></div>
+                        <div class="card h-80 rounded-box bg-base-100 lg:flex-[1.5]">
+                            <div class="card-body">
+                                <fieldset class="join flex-wrap">
+                                    <input type="radio" name="theme-buttons" class="theme-controller btn join-item" aria-label="Dark" value="dark" />
+                                    <input type="radio" name="theme-buttons" class="theme-controller btn join-item" aria-label="Light" value="light" />
+                                    <input type="radio" name="theme-buttons" class="theme-controller btn join-item" aria-label="Synthwave" value="synthwave" />
+                                    <input type="radio" name="theme-buttons" class="theme-controller btn join-item" aria-label="Valentine" value="valentine" />
+                                    <input type="radio" name="theme-buttons" class="theme-controller btn join-item" aria-label="Aqua" value="aqua" />
+                                    <input type="radio" name="theme-buttons" class="theme-controller btn join-item" aria-label="Dracula" value="dracula" />
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <alert-box class="fixed z-50"></alert-box>
+        </div>
+        <script type="module" src="settings.ts"></script>
+    </body>
+</html>

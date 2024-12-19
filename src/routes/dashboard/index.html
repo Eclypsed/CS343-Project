@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nicholas Tamassia - CS343 Project - Dashboard</title>
+        <link rel="stylesheet" href="../app.css" />
+        <script type="module">
+            import { loadTheme } from '@lib/themes'
+            loadTheme()
+        </script>
+    </head>
+
+    <body>
+        <div class="no-scrollbar relative h-screen overflow-x-clip overflow-y-scroll bg-base-300 font-notoSans">
+            <nav class="navbar sticky top-0 isolate z-50 bg-base-100 px-4 font-sans">
+                <div class="navbar-start">
+                    <tanoc-store-logo class="hidden place-items-center md:grid"></tanoc-store-logo>
+                </div>
+                <div class="navbar-center">
+                    <h1 class="hidden md:inline-block">
+                        <strong class="px-3 text-2xl">Tracked Items</strong>
+                    </h1>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn btn-ghost" href="../settings/">Settings</a>
+                    <currency-selector class="w-20"></currency-selector>
+                </div>
+            </nav>
+            <div class="flex items-center gap-2 p-2">
+                <button id="add-product-button" class="btn bg-base-100">Add Item</button>
+                <button id="export-products-button" class="btn bg-base-100">Export</button>
+            </div>
+            <main id="card-wrapper" class="my-8 grid w-full gap-5 px-[5%]"></main>
+            <product-search-modal></product-search-modal>
+            <alert-box class="fixed z-50"></alert-box>
+        </div>
+        <script type="module" src="main.ts"></script>
+    </body>
+</html>

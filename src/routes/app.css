@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Yes, there is a reason I am not using repeat(auto-fill) here */
+#card-wrapper {
+    grid-template-columns: 1fr;
+}
+@media (min-width: 400px) {
+    #card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 700px) {
+    #card-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1050px) {
+    #card-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (min-width: 1350px) {
+    #card-wrapper {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media (min-width: 1700px) {
+    #card-wrapper {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+@media (min-width: 2300px) {
+    #card-wrapper {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+@media (min-width: 3000px) {
+    #card-wrapper {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
