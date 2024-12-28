@@ -1,4 +1,4 @@
-# TANO*C Store Tacker
+# TANO*C Store Tracker
 
 My semester project for CS343 (Application Development). A simple dashboard for keeping track of the stock status of items from TANO*C Store with the ability to automatically convert prices to any currency.
 
